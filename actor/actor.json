@@ -1,0 +1,9 @@
+{
+  "actorSpecification": 1,
+  "name": "x402-global-data-api",
+  "title": "x402 Global Data API — AI Agent Native Payments",
+  "description": "13 endpoints: crypto, stocks, forex, energy (EU+global), macro rates, news, Google Trends, X trends, Meta Ads, Amazon. Pay per request with USDC via x402.",
+  "version": "2.0",
+  "buildTag": "latest",
+  "dockerfile": "./Dockerfile"
+}
