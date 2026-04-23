@@ -1,0 +1,30 @@
+{
+  "title": "x402 Global Data API v2.0",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "endpoint": {
+      "title": "Endpoint",
+      "type": "string",
+      "enum": ["info","crypto/prices","crypto/fear-greed","market/stocks","market/forex","energy/europe","energy/global","macro/rates","news/crypto","news/general","trends/google","trends/x","ads/facebook","ecommerce/amazon"],
+      "default": "info",
+      "editor": "select"
+    },
+    "symbols":            {"title":"Crypto Symbols","type":"array","items":{"type":"string"},"default":["BTC","ETH","SOL"],"editor":"json"},
+    "tickers":            {"title":"Stock Tickers","type":"array","items":{"type":"string"},"default":["AAPL","MSFT","NVDA","SPY"],"editor":"json"},
+    "forex_base":         {"title":"Forex Base","type":"string","default":"USD","editor":"textfield"},
+    "forex_pairs":        {"title":"Forex Pairs","type":"array","items":{"type":"string"},"default":[],"editor":"json"},
+    "countries":          {"title":"Country Codes (Energy)","type":"array","items":{"type":"string"},"default":["DE","FR","AT","HU","PL"],"editor":"json"},
+    "keywords":           {"title":"Google Trends Keywords","type":"array","items":{"type":"string"},"default":["bitcoin","AI"],"editor":"json"},
+    "geo":                {"title":"Google Trends Geo","type":"string","default":"","editor":"textfield"},
+    "country_code":       {"title":"X Trends Country","type":"string","default":"US","editor":"textfield"},
+    "ad_keyword":         {"title":"Facebook Ad Keyword","type":"string","default":"crypto","editor":"textfield"},
+    "ad_country":         {"title":"Facebook Ad Country","type":"string","default":"ALL","editor":"textfield"},
+    "amazon_query":       {"title":"Amazon Query","type":"string","default":"laptop","editor":"textfield"},
+    "amazon_marketplace": {"title":"Amazon Marketplace","type":"string","default":"US","editor":"textfield"},
+    "limit":              {"title":"Result Limit","type":"integer","default":10,"minimum":1,"maximum":50},
+    "demo_mode":          {"title":"Demo Mode","type":"boolean","default":false},
+    "apify_token":        {"title":"Apify Token (Ads/Amazon)","type":"string","default":"","editor":"textfield","isSecret":true},
+    "x402_payment_signature": {"title":"x402 Payment Signature","type":"string","default":"","editor":"textfield"}
+  }
+}
